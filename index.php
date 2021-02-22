@@ -1,5 +1,5 @@
 <?php
-//include 'modals.php';
+include 'modals.php';
 ?>
 
 <!DOCTYPE html>
@@ -13,16 +13,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">  
 </head>
 
-<header>
-    <div class="dropdown">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Gestion des images
-        </button>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-            <button class="dropdown-item text-primary" href="modals.php" data-toggle="modal" data-target="#newimg">Ajouter une image</button>
-            <button class="dropdown-item text-success" type="button">Editer une image</button>
-            <button class="dropdown-item text-danger" type="button">Supprimer une image</button>
-        </ul>
+<header class="bg-dark py-4">
+    <div class="row" aria-labelledby="dropdownMenu2">
+        <button class="col-md-4 btn text-primary" href="modals.php" data-toggle="modal" data-target="#newimg">Ajouter une image</button>
+        <button class="col-md-4 btn text-success" type="button">Editer une image</button>
+        <button class="col-md-4 btn text-danger" type="button">Supprimer une image</button>
     </div>
 </header>
 

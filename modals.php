@@ -13,6 +13,7 @@
       </div>
       <div class="modal-body">
         <form>
+          <div>
             <div class="mb-3">
                 <label for="name" class="form-label">Nom/Libellé</label>
                 <input type="text" class="form-control" id="name" aria-describedby="name">
@@ -25,43 +26,52 @@
                 <label for="date" class="form-label">Fin des droits</label>
                 <input type="date" class="form-control" id="date" aria-describedby="date">
             </div>
+          </div>
 
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                <label class="form-check-label" for="flexSwitchCheckDefault">Avec produit : </label>
+          <label>Image :</label>
+          <div class="px-4">
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="customSwitch1">
+              <label class="custom-control-label" for="customSwitch1">avec produit(s)</label>
             </div>
 
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                <label class="form-check-label" for="flexSwitchCheckDefault">Avec humain : </label>
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="customSwitch1">
+              <label class="custom-control-label" for="customSwitch1">avec humain(s)</label>
             </div>
 
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                <label class="form-check-label" for="flexSwitchCheckDefault">Institutionnelle : </label>
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="customSwitch1">
+              <label class="custom-control-label" for="customSwitch1">institutionnelle</label>
             </div>
 
-            <div class="form-check form-switch">
-                <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                <label class="form-check-label" for="flexSwitchCheckDefault">Droits d'utilisation limités : </label>
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="customSwitch1">
+              <label class="custom-control-label" for="customSwitch1">aux droits d'utilisation limités</label>
+            </div>
+          </div>
+
+          <div class="my-4 text-center">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="customRadioInline1" name="customRadioInline" class="custom-control-input">
+              <label class="custom-control-label" for="customRadioInline1">Logo</label>
             </div>
 
-            <div class="btn-group" role="group" aria-label="Basic checkbox toggle button group">
-                <input type="checkbox" class="btn-check" id="btncheck1" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btncheck1">Logo</label>
-
-                <input type="checkbox" class="btn-check" id="btncheck2" autocomplete="on">
-                <label class="btn btn-outline-primary" for="btncheck2">Photo Passionfroid</label>
-
-                <input type="checkbox" class="btn-check" id="btncheck3" autocomplete="off">
-                <label class="btn btn-outline-primary" for="btncheck3">Photo Fournisseur</label>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="customRadioInline2" name="customRadioInline" class="custom-control-input">
+              <label class="custom-control-label" for="customRadioInline2">Photo Passionfroid</label>
             </div>
 
-            <button type="submit" class="btn btn-primary">Terminer</button>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="customRadioInline3" name="customRadioInline" class="custom-control-input">
+              <label class="custom-control-label" for="customRadioInline3">Photo Fournisseur</label>
+            </div>
+          </div>
         </form>
+
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fermer</button>
+          <button type="submit" class="btn btn-primary">Terminer</button>
       </div>
     </div>
   </div>
