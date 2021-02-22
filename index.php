@@ -1,4 +1,5 @@
 <?php
+include 'includes/crud.php';
 include 'modals.php';
 ?>
 
@@ -22,17 +23,20 @@ include 'modals.php';
 </header>
 
 <body>
-    <div class="justify-center m-4">
-        <input type="text" class="form-control" placeholder="Recherche d'une image" aria-label="Recherche d'une image">
+    <div class="row">
+        <div class="col-md-6 mt-4 mx-auto">
+            <input type="text" class="form-control" placeholder="Recherche d'une image" aria-label="Recherche d'une image">
+        </div>
     </div>
 </body>
 
-<footer class="position-absolute bottom-0">
-<div class="text-center bg-dark text-white">
-    <p>Copyright Passionfroid 2021</p>
-</div>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-  <script src="//cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+<footer>
+    <div class="text-center bg-dark text-white py-4 fixed-bottom">
+        <p>Copyright Passionfroid 2021</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="//cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js"></script>
+    <script src="js/main.js"></script>
 </footer>
 </html>
