@@ -1,27 +1,5 @@
 <!-- login -->
-<?php
 
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Passionfroid : Login</title>
-
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">  
-        <link rel="stylesheet" type="text/css" href="css/amsify.suggestags.css">
-        <script src="https://kit.fontawesome.com/886bfe691e.js" crossorigin="anonymous"></script>
-        <style type="text/css">
-            .amsify-suggestags-list {
-                z-index: 1000 !important;
-                min-width: 70%;
-            }
-        </style>
-</head>
 <body class="bg-gradient-primary">
 
     <div class="container">
