@@ -1,9 +1,6 @@
 $(document).ready(function() {
 
     var fillValue = function (input, value) {
-        
-        console.log(input.attr('name'), input[0].nodeName, input.attr('type'), value);
-        
         // input text
         if (input[0].nodeName == 'INPUT' && input.attr('type') == 'text') {
             input.val(value);
@@ -47,16 +44,37 @@ $(document).ready(function() {
                     fillValue(input, data[i]);
                 }
                 else {
-                    console.log('ko', i);
                 }
-
+                
+                modal.find('input[name="tags"]').amsifySuggestags({
+                    suggestions: tags.map(tag => tag.name)
+                });
             }
         }
-
-        $('input[name="tags"]').amsifySuggestags({
-            suggestions: ['India', 'Pakistan', 'Nepal', 'UAE', 'Iran', 'Bangladesh']
-        });
-
     });
 
+    $('#editimg').on('hide.bs.modal', function (e) {
+        var modal = $(this);
+        modal.find('input[name="tags"]').amsifySuggestags({}, 'destroy');
+    });
+    
+
+    $('input[name="search"]').amsifySuggestags({
+        suggestions: tags.map(tag => tag.name),
+        tagLimit: 1,
+        afterAdd : function(value) {
+            console.info(this); // Parameter will be value
+            var cards = $('.card');
+            cards.show();
+            cards.not('.tag-' + value.replaceAll(' ', '-')).hide();
+        },
+        afterRemove : function(value) {
+            console.info(value); // Parameter will be value
+            var cards = $('.card');
+            cards.show();
+        },
+        suggestMatch : function(suggestionItem, value) {
+            return ~suggestionItem.toString().toLowerCase().indexOf(value.toString().toLowerCase());
+        }
+    });
 })

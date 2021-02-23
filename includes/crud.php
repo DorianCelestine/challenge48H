@@ -1,5 +1,7 @@
 <?php
 
+define('ROOT', realpath(dirname(__DIR__)));
+
 // Connexion à la bdd
 $bdd = new PDO('mysql:host=localhost;dbname=passionfroid-img','root','');
 $bdd->exec("SET NAMES UTF8");
@@ -133,4 +135,18 @@ function debug($var) {
     echo '<pre>';
     var_dump($var);
     echo '</pre>';
+}
+
+function upload() {
+    $uploaddir = ROOT . '/img/';
+    $uploadfile = $uploaddir . basename($_FILES['img_url']['name']);
+    //echo $uploadfile;
+
+    echo '<pre>';
+    if (move_uploaded_file($_FILES['img_url']['tmp_name'], $uploadfile)) {
+        echo "Le fichier est valide, et a été téléchargé avec succès. Voici plus d'informations :\n";
+    } else {
+        echo "Attaque potentielle par téléchargement de fichiers. Voici plus d'informations :\n";
+    }
+    return $_FILES['img_url']['name'];
 }

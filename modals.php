@@ -8,10 +8,11 @@
         <button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close"><i class="fas fa-times text-white"></i></button>
       </div>
       <div class="modal-body">
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
+          <input type="hidden" name="MAX_FILE_SIZE" value="300000" />
           <div>
             <div class="custom-file my-4">
-              <input type="file" class="custom-file-input" id="customFile">
+              <input type="file" class="custom-file-input" id="customFile" name="img_url">
               <label class="custom-file-label" for="customFile">Choisir une image</label>
             </div>
 
@@ -30,17 +31,7 @@
           </div>
 
           <div class="mb-3">
-            <select name="tags" class="custom-select" multiple>
-              <option disabled selected>Tags</option>
-              <?php
-                $tags = db_get('tags');
-                foreach($tags as $tag){
-              ?>
-                <option value="<?php echo $tag['id']?>"><?php echo $tag['name'] ?></option>
-              <?php
-                }
-              ?>
-            </select>
+            <input class="form-control" type="text" name="tags" value>
           </div>
 
           <label>Image :</label>
