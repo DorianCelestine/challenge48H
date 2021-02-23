@@ -112,3 +112,19 @@ function db_delete($table, $id) {
 
     return $response;
 }
+
+function parse($template_name, $data) {
+    $template = file_get_contents($template_name);
+    $template = preg_replace_callback(
+        '/(\{\{([$a-zA-Z0-9_]+)\}\})/',
+        function ($matches) use ($data) {
+
+            if(preg_match('/^\$([a-zA-Z_]+)/', $matches[2], $matches2)){
+                return constant($matches2[1]);
+            }
+            return $data[$matches[2]];
+        },
+        $template
+    );
+    return $template;
+}
