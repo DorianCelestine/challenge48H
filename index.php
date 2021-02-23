@@ -1,6 +1,6 @@
 <!-- index -->
 <?php
-include 'includes/crud.php';
+include 'includes/functions.php';
 include 'includes/controller.php';
 ?>
 
@@ -28,7 +28,9 @@ include 'includes/controller.php';
         <h1 class="text-uppercase text-white text-center col-md-12 my-4">Gestion des images</h1>
     </div>
     <div class="bg-primary" style="bottom:1; height:10px; padding:0;"></div>
-    <button href="login.php" class="btn btn-success" data-toggle="modal" data-target="#login"><i class="fas fa-user"></i></button>
+    <div class="text-center py-4">
+        <button href="login.php" class="btn btn-success text-dark bg-white border-dark" data-toggle="modal" data-target="#login"><i class="fas fa-user"></i></button>
+    </div>
 </header>
 
 <body style="padding-bottom: 100px;">
