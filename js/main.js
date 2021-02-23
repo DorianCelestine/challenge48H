@@ -2,7 +2,7 @@ $(document).ready(function() {
 
     var fillValue = function (input, value) {
         // input text
-        if (input[0].nodeName == 'INPUT' && input.attr('type') == 'text') {
+        if (input[0].nodeName == 'INPUT' && (input.attr('type') == 'text' || input.attr('type') == 'hidden')) {
             input.val(value);
         }
         // input date
@@ -27,6 +27,7 @@ $(document).ready(function() {
             btn = $(e.relatedTarget),
             id = btn.data('id'),
             data = imgs['img_' + id];
+            console.log(id);
         
         if (id == 0) { 
             // nouvelle image

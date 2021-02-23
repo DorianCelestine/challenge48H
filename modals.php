@@ -9,7 +9,7 @@
       </div>
       <div class="modal-body">
         <form method="post" enctype="multipart/form-data">
-          <input type="hidden" name="MAX_FILE_SIZE" value="300000" />
+          <input type="hidden" name="MAX_FILE_SIZE" value="900000" />
           <div>
             <div class="custom-file my-4">
               <input type="file" class="custom-file-input" id="customFile" name="img_url">

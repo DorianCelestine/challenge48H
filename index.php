@@ -28,7 +28,7 @@ include 'includes/controller.php';
         <h1 class="text-uppercase text-white text-center col-md-12 my-4">Gestion des images</h1>
     </div>
     <div class="bg-primary" style="bottom:1; height:10px; padding:0;"></div>
-    <button class="col-md-4 btn btn-success" data-id="0" data-toggle="modal" data-target="#editimg">Nouvelle image</button>
+    <button href="login.php" class="btn btn-success" data-toggle="modal" data-target="#login"><i class="fas fa-user"></i></button>
 </header>
 
 <body style="padding-bottom: 100px;">
@@ -38,8 +38,11 @@ include 'includes/controller.php';
         </div>
     </div>
 
+    <div class="text-center my-4">
+        <button class="col-md-4 btn btn-primary" data-id="0" data-toggle="modal" data-target="#editimg"><i class="fas fa-plus-square"></i></button>
+    </div>
     <div class="container">
-        <div class="d-flex flex-wrap">
+        <div class="d-flex flex-wrap my-4 justify-content-around">
             <?php 
             $images = db_get('images');
             $array_images = [];
