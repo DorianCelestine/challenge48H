@@ -4,7 +4,7 @@ $(document).ready(function() {
         var modal = $(this),
             btn = $(input.relatedTarget),
             id = btn.data('id');
-        console.log(input.attr('name'), input[0].nodeName, input.attr('type'));
+            console.log(input.attr('name'), input[0].nodeName, input.attr('type'));
         
         
         // input text
@@ -19,6 +19,9 @@ $(document).ready(function() {
         if (input[0].nodeName == 'INPUT' && input.attr('type') == 'checkbox' && value == 1) {
             input.prop("checked", true);
         }
+        if (input[0].nodeName == 'INPUT' && input.attr('type') == 'hidden' && value == "0") {
+            input.val(id);
+        }
         // select
         // textarea
 
@@ -30,7 +33,7 @@ $(document).ready(function() {
             id = btn.data('id'),
             data = imgs['img_' + id];
         
-        if (id == 0) {
+        if (id == 0) { 
             // nouvelle image
             console.log(input.attr('name'), input[0].nodeName, input.attr('type'));
             if (input[0].nodeName == 'INPUT' && input.attr('type') == 'hidden') {

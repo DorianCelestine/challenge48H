@@ -177,7 +177,8 @@
               <label class="custom-control-label" for="customRadioInline3">Photo Fournisseur</label>
             </div>
             
-            <input type="hidden" name="_form" value="formEdit" id="hidden">
+            <input type="hidden" name="_id" value="0">
+            <input type="hidden" name="_form" value="formEdit">
             <button type="submit" class="btn btn-primary">Terminer</button>
           </div>
         </form>

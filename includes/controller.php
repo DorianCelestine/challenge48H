@@ -7,7 +7,7 @@ if (isset($_POST['_form'])) {
             $data = [
                 'name' => $_POST['name']
             ];
-            db_update('images', $_POST['id'], $data);
+            db_update('images', id , $data);
             break;
         default:
         break;
