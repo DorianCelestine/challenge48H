@@ -128,3 +128,9 @@ function parse($template_name, $data) {
     );
     return $template;
 }
+
+function debug($var) {
+    echo '<pre>';
+    var_dump($var);
+    echo '</pre>';
+}

@@ -1,15 +1,16 @@
 $(document).ready(function() {
 
     var fillValue = function (input, value) {
-        var modal = $(this),
-            btn = $(input.relatedTarget),
-            id = btn.data('id');
-            console.log(input.attr('name'), input[0].nodeName, input.attr('type'));
         
+        console.log(input.attr('name'), input[0].nodeName, input.attr('type'), value);
         
         // input text
         if (input[0].nodeName == 'INPUT' && input.attr('type') == 'text') {
             input.val(value);
+        }
+        // input date
+        if (input[0].nodeName == 'INPUT' && input.attr('type') == 'date' && value != null) {
+            input.val(value.substring(0, 10));
         }
         // input radio
         if (input[0].nodeName == 'INPUT' && input.attr('type') == 'radio') {
@@ -18,9 +19,6 @@ $(document).ready(function() {
         // input checkbox
         if (input[0].nodeName == 'INPUT' && input.attr('type') == 'checkbox' && value == 1) {
             input.prop("checked", true);
-        }
-        if (input[0].nodeName == 'INPUT' && input.attr('type') == 'hidden' && value == "0") {
-            input.val(id);
         }
         // select
         // textarea
@@ -35,10 +33,6 @@ $(document).ready(function() {
         
         if (id == 0) { 
             // nouvelle image
-            console.log(input.attr('name'), input[0].nodeName, input.attr('type'));
-            if (input[0].nodeName == 'INPUT' && input.attr('type') == 'hidden') {
-                input.val("formNew");
-            }
 
         }
         else {
@@ -58,6 +52,11 @@ $(document).ready(function() {
 
             }
         }
+
+        $('input[name="tags"]').amsifySuggestags({
+            suggestions: ['India', 'Pakistan', 'Nepal', 'UAE', 'Iran', 'Bangladesh']
+        });
+
     });
 
 })
